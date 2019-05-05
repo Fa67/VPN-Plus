@@ -12,6 +12,11 @@
 		BB89A0B2227F522C00877DFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB89A0B0227F522C00877DFE /* Main.storyboard */; };
 		BB89A0B4227F522D00877DFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB89A0B3227F522D00877DFE /* Assets.xcassets */; };
 		BB89A0B7227F522D00877DFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB89A0B5227F522D00877DFE /* LaunchScreen.storyboard */; };
+		BB89A0C1227F526100877DFE /* VpnConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB89A0C0227F526100877DFE /* VpnConnection.swift */; };
+		BB89A0C4227F526600877DFE /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB89A0C2227F526600877DFE /* VPNManager.swift */; };
+		BB89A0C5227F526600877DFE /* Vpn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB89A0C3227F526600877DFE /* Vpn.swift */; };
+		BB89A0C8227F527100877DFE /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB89A0C7227F527100877DFE /* KeychainWrapper.swift */; };
+		BB89A0CB227F530200877DFE /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB89A0CA227F530200877DFE /* NetworkExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,12 @@
 		BB89A0B3227F522D00877DFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB89A0B6227F522D00877DFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB89A0B8227F522D00877DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB89A0C0227F526100877DFE /* VpnConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VpnConnection.swift; sourceTree = "<group>"; };
+		BB89A0C2227F526600877DFE /* VPNManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
+		BB89A0C3227F526600877DFE /* Vpn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vpn.swift; sourceTree = "<group>"; };
+		BB89A0C7227F527100877DFE /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		BB89A0CA227F530200877DFE /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		BB89A0CC227F530200877DFE /* VPN Plus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "VPN Plus.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB89A0CB227F530200877DFE /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +52,7 @@
 			children = (
 				BB89A0AB227F522C00877DFE /* VPN Plus */,
 				BB89A0AA227F522C00877DFE /* Products */,
+				BB89A0C9227F530200877DFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +67,8 @@
 		BB89A0AB227F522C00877DFE /* VPN Plus */ = {
 			isa = PBXGroup;
 			children = (
+				BB89A0CC227F530200877DFE /* VPN Plus.entitlements */,
+				BB89A0BE227F523600877DFE /* Libraries */,
 				BB89A0AC227F522C00877DFE /* AppDelegate.swift */,
 				BB89A0AE227F522C00877DFE /* ViewController.swift */,
 				BB89A0B0227F522C00877DFE /* Main.storyboard */,
@@ -62,6 +77,41 @@
 				BB89A0B8227F522D00877DFE /* Info.plist */,
 			);
 			path = "VPN Plus";
+			sourceTree = "<group>";
+		};
+		BB89A0BE227F523600877DFE /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				BB89A0C6227F526900877DFE /* Keychain */,
+				BB89A0BF227F525600877DFE /* VPN */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		BB89A0BF227F525600877DFE /* VPN */ = {
+			isa = PBXGroup;
+			children = (
+				BB89A0C0227F526100877DFE /* VpnConnection.swift */,
+				BB89A0C3227F526600877DFE /* Vpn.swift */,
+				BB89A0C2227F526600877DFE /* VPNManager.swift */,
+			);
+			path = VPN;
+			sourceTree = "<group>";
+		};
+		BB89A0C6227F526900877DFE /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				BB89A0C7227F527100877DFE /* KeychainWrapper.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		BB89A0C9227F530200877DFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB89A0CA227F530200877DFE /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +146,11 @@
 				TargetAttributes = {
 					BB89A0A8227F522C00877DFE = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.VPNLite = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,7 +190,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB89A0C1227F526100877DFE /* VpnConnection.swift in Sources */,
+				BB89A0C5227F526600877DFE /* Vpn.swift in Sources */,
 				BB89A0AF227F522C00877DFE /* ViewController.swift in Sources */,
+				BB89A0C8227F527100877DFE /* KeychainWrapper.swift in Sources */,
+				BB89A0C4227F526600877DFE /* VPNManager.swift in Sources */,
 				BB89A0AD227F522C00877DFE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,9 +341,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "VPN Plus/VPN Plus.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPJRMYQ38F;
 				INFOPLIST_FILE = "VPN Plus/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,9 +361,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "VPN Plus/VPN Plus.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UPJRMYQ38F;
 				INFOPLIST_FILE = "VPN Plus/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -10,11 +10,40 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let server = "159.89.195.30.sslip.io"
+    let user = "manhpham90vn"
+    let pass = "123123"
+    
+    var delegate: VpnDelegate?
+    var connection: VpnConnection?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        connection = VpnConnection.init(ip: server, login: user, password: pass, remoteId: server, localId: "", serverCertificateCommonName: "", countryName: "", countryIso: "")
+        Vpn.instance.connection = connection
+        Vpn.instance.delegate = self
+        Vpn.instance.requestPermission()
     }
-
 
 }
 
+extension ViewController: VpnDelegate {
+    func vpn(_ vpn: Vpn, statusDidChange status: VpnStatus) {
+        print("statusDidChange", status)
+    }
+    
+    func vpn(_ vpn: Vpn, didRequestPermission status: ConnectStatus) {
+        print("didRequestPermission", status)
+        if status == .success {
+            Vpn.instance.connect()
+        }
+    }
+    
+    func vpn(_ vpn: Vpn, didConnectWithError error: String?) {
+        print("error", error ?? "")
+    }
+    
+    func vpnDidDisconnect(_ vpn: Vpn) {
+        print("vpnDidDisconnect")
+    }
+}
