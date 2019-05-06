@@ -3,5 +3,5 @@ language: swift
 osx_image: xcode10.2
 
 script:
-  - xcodebuild test -enableCodeCoverage YES -scheme "VPN Plus" -workspace "VPN Plus.xcworkspace" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=12.2'
+  - xcodebuild test -enableCodeCoverage YES -scheme 'VPN Plus' -workspace 'VPN Plus.xcworkspace' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=12.2'
 
