@@ -8,4 +8,4 @@ before_install:
   - pod install
 
 script:
-  - xcodebuild test -enableCodeCoverage YES -scheme 'VPN Plus' -workspace 'VPN Plus.xcworkspace' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=12.2'
+  - xcodebuild clean build -scheme 'VPN Plus' -workspace 'VPN Plus.xcworkspace' -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=12.2'
