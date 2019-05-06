@@ -14,9 +14,6 @@
 		BB89A0B4227F522D00877DFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB89A0B3227F522D00877DFE /* Assets.xcassets */; };
 		BB89A0B7227F522D00877DFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB89A0B5227F522D00877DFE /* LaunchScreen.storyboard */; };
 		BB89A0CB227F530200877DFE /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB89A0CA227F530200877DFE /* NetworkExtension.framework */; };
-		BBC08F30228015EA006F592C /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC08F2F228015EA006F592C /* KeychainWrapper.swift */; };
-		BBC08F5122803B23006F592C /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC08F5022803B23006F592C /* Account.swift */; };
-		BBC08F5322803B3A006F592C /* VPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC08F5222803B3A006F592C /* VPN.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +26,6 @@
 		BB89A0B8227F522D00877DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB89A0CA227F530200877DFE /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		BB89A0CC227F530200877DFE /* VPN Plus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "VPN Plus.entitlements"; sourceTree = "<group>"; };
-		BBC08F2F228015EA006F592C /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
-		BBC08F5022803B23006F592C /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		BBC08F5222803B3A006F592C /* VPN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPN.swift; sourceTree = "<group>"; };
 		BFEC1D26D98DB40B4302759C /* Pods_VPN_Plus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPN_Plus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3263FD652BEE773F3D8046A /* Pods-VPN Plus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPN Plus.debug.xcconfig"; path = "Target Support Files/Pods-VPN Plus/Pods-VPN Plus.debug.xcconfig"; sourceTree = "<group>"; };
 		FD59CB675622AC770886B2E1 /* Pods-VPN Plus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPN Plus.release.xcconfig"; path = "Target Support Files/Pods-VPN Plus/Pods-VPN Plus.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				BB89A0CC227F530200877DFE /* VPN Plus.entitlements */,
-				BBC08F4F22803AF7006F592C /* Libraries */,
 				BB89A0AC227F522C00877DFE /* AppDelegate.swift */,
 				BB89A0AE227F522C00877DFE /* ViewController.swift */,
 				BB89A0B0227F522C00877DFE /* Main.storyboard */,
@@ -99,16 +92,6 @@
 				BFEC1D26D98DB40B4302759C /* Pods_VPN_Plus.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BBC08F4F22803AF7006F592C /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				BBC08F2F228015EA006F592C /* KeychainWrapper.swift */,
-				BBC08F5022803B23006F592C /* Account.swift */,
-				BBC08F5222803B3A006F592C /* VPN.swift */,
-			);
-			path = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,13 +177,13 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-VPN Plus/Pods-VPN Plus-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/MPVPN/MPVPN.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MPVPN.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -236,9 +219,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBC08F30228015EA006F592C /* KeychainWrapper.swift in Sources */,
-				BBC08F5122803B23006F592C /* Account.swift in Sources */,
-				BBC08F5322803B3A006F592C /* VPN.swift in Sources */,
 				BB89A0AF227F522C00877DFE /* ViewController.swift in Sources */,
 				BB89A0AD227F522C00877DFE /* AppDelegate.swift in Sources */,
 			);

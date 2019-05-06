@@ -44,7 +44,6 @@ private let SecReturnAttributes: String = kSecReturnAttributes as String
 /// KeychainWrapper is a class to help make Keychain access in Swift more straightforward. It is designed to make accessing the Keychain services more like using NSUserDefaults, which is much more familiar to people.
 class KeychainWrapper {
     
-    @available(*, deprecated: 2.2.1, message: "KeychainWrapper.defaultKeychainWrapper is deprecated, use KeychainWrapper.standard instead")
     static let defaultKeychainWrapper = KeychainWrapper.standard
     
     /// Default keychain wrapper access
@@ -264,7 +263,6 @@ class KeychainWrapper {
         }
     }
     
-    @available(*, deprecated: 2.2.1, message: "remove is deprecated, use removeObject instead")
     @discardableResult func remove(key: String) -> Bool {
         return removeObject(forKey: key)
     }

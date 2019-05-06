@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import NetworkExtension
+import MPVPN
 
 class ViewController: UIViewController {
 
@@ -41,10 +41,10 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: VpnDelegate {
+extension ViewController: VPNDelegate {
     func vpn(_ vpn: VPN, statusDidChange status: VpnStatus) {
         print("statusDidChange", status)
-        self.status.text = status.rawValue
+        self.status.text = status.description
     }
     
     func vpn(_ vpn: VPN, didRequestPermission status: ConnectStatus) {

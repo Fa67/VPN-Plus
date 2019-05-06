@@ -1,6 +1,6 @@
 //
-//  VPN.swift
-//  VPN Plus
+//  Vpn.swift
+//  MPVPN
 //
 //  Created by Manh Pham on 5/6/19.
 //  Copyright © 2019 Manh Pham. All rights reserved.
@@ -9,31 +9,10 @@
 import Foundation
 import NetworkExtension
 
-enum VpnStatus: String {
-    case connected
-    case disconnected
-    case connecting
-    case reasserting
-    case disconnecting
-    case invalid
-}
-
-enum ConnectStatus {
-    case success
-    case failure
-}
-
-protocol VpnDelegate: class {
-    func vpn(_ vpn: VPN, statusDidChange status: VpnStatus)
-    func vpn(_ vpn: VPN, didRequestPermission status: ConnectStatus)
-    func vpn(_ vpn: VPN, didConnectWithError error: String?)
-    func vpnDidDisconnect(_ vpn: VPN)
-}
-
-class VPN {
+public final class VPN {
     
     public static let share = VPN()
-    public weak var delegate: VpnDelegate?
+    public weak var delegate: VPNDelegate?
     
     public func status() -> VpnStatus {
         guard let status = self.vpnStatus else { return .invalid}
@@ -46,7 +25,7 @@ class VPN {
         case .reasserting: return .reasserting
         }
     }
-
+    
     private let KEYCHAIN_VPN_SECRET = "keychain_vpn_secret"
     private var vpnStatus: NEVPNStatus!
     private var manager: NEVPNManager {
@@ -61,13 +40,13 @@ class VPN {
         removeObservers()
     }
     
-    func requestPermision(account: Account) {
+    public func requestPermision(account: Account) {
         loadFromPreferences {
             self.save(account: account)
         }
     }
     
-    func loadFromPreferences(completion: @escaping () -> Void) {
+    private func loadFromPreferences(completion: @escaping () -> Void) {
         manager.loadFromPreferences { error in
             guard error == nil else {
                 self.delegate?.vpn(self, didRequestPermission: .failure)
@@ -77,13 +56,13 @@ class VPN {
         }
     }
     
-    func removeFromPreferences() {
+    public func removeFromPreferences() {
         manager.removeFromPreferences { (_) in
             
         }
     }
     
-    func save(account: Account) {
+    public func save(account: Account) {
         
         KeychainWrapper.standard.set(account.sharedSecret, forKey: KEYCHAIN_VPN_SECRET)
         let passwordDataRef = KeychainWrapper.standard.dataRef(forKey: KEYCHAIN_VPN_SECRET)
@@ -112,7 +91,7 @@ class VPN {
         }
     }
     
-    func connect() {
+    public func connect() {
         do {
             try manager.connection.startVPNTunnel()
         } catch NEVPNError.configurationInvalid {
@@ -128,12 +107,12 @@ class VPN {
         }
     }
     
-    func disconnect() {
+    public func disconnect() {
         manager.connection.stopVPNTunnel()
         delegate?.vpnDidDisconnect(self)
     }
     
-    func toggleVpn() {
+    public func toggleVpn() {
         if vpnStatus == .connected  {
             disconnect()
         } else if vpnStatus == .disconnected {
@@ -141,7 +120,7 @@ class VPN {
         }
     }
     
-    func addObservers(inQueue queue: OperationQueue = OperationQueue.main) {
+    private func addObservers(inQueue queue: OperationQueue = OperationQueue.main) {
         NotificationCenter
             .default
             .addObserver(
@@ -166,9 +145,9 @@ class VPN {
                     }
             })
     }
-
     
-    func removeObservers() {
+    
+    private func removeObservers() {
         NotificationCenter.default.removeObserver(
             self,
             name: NSNotification.Name.NEVPNStatusDidChange,
