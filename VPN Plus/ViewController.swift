@@ -7,43 +7,58 @@
 //
 
 import UIKit
+import NetworkExtension
 
 class ViewController: UIViewController {
 
-    let server = "159.89.195.30.sslip.io"
-    let user = "manhpham90vn"
-    let pass = "123123"
+    @IBOutlet weak var status: UILabel!
     
-    var delegate: VpnDelegate?
-    var connection: VpnConnection?
+    let serverAddress = "159.65.129.252"
+    let sharedSecret = "4ec04e07-f030-4445-ba59-3d8c1cb180a2"
+    var account: Account!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        connection = VpnConnection.init(ip: server, login: user, password: pass, remoteId: server, localId: "", serverCertificateCommonName: "", countryName: "", countryIso: "")
-        Vpn.instance.connection = connection
-        Vpn.instance.delegate = self
-        Vpn.instance.requestPermission()
+        account = Account(serverAddress: serverAddress, sharedSecret: sharedSecret)
+        VPN.share.delegate = self
     }
 
+    @IBAction func requestTapped(_ sender: Any) {
+        VPN.share.requestPermision(account: account)
+    }
+    
+    @IBAction func connectTapped(_ sender: Any) {
+        VPN.share.connect()
+    }
+    
+    @IBAction func disconnectTapped(_ sender: Any) {
+        VPN.share.disconnect()
+    }
+    
+    @IBAction func removeTapped(_ sender: Any) {
+        VPN.share.removeFromPreferences()
+    }
+    
 }
 
 extension ViewController: VpnDelegate {
-    func vpn(_ vpn: Vpn, statusDidChange status: VpnStatus) {
+    func vpn(_ vpn: VPN, statusDidChange status: VpnStatus) {
         print("statusDidChange", status)
+        self.status.text = status.rawValue
     }
     
-    func vpn(_ vpn: Vpn, didRequestPermission status: ConnectStatus) {
+    func vpn(_ vpn: VPN, didRequestPermission status: ConnectStatus) {
         print("didRequestPermission", status)
-        if status == .success {
-            Vpn.instance.connect()
-        }
     }
     
-    func vpn(_ vpn: Vpn, didConnectWithError error: String?) {
-        print("error", error ?? "")
+    func vpn(_ vpn: VPN, didConnectWithError error: String?) {
+        print("didConnectWithError", error ?? "")
     }
     
-    func vpnDidDisconnect(_ vpn: Vpn) {
+    func vpnDidDisconnect(_ vpn: VPN) {
         print("vpnDidDisconnect")
     }
+    
+    
 }
+
