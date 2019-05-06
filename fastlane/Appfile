@@ -1,0 +1,8 @@
+app_identifier("com.manhpham.VPN-Plus") # The bundle identifier of your app
+apple_id("manhpham90vn@icloud.com") # Your Apple email address
+
+itc_team_id("120076320") # App Store Connect Team ID
+team_id("UPJRMYQ38F") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
