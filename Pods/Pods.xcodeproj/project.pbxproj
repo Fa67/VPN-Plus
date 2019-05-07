@@ -36,19 +36,19 @@
 		0D7815C90F5370963AF3C37329C177AE /* ConnectStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectStatus.swift; path = MPVPN/Classes/ConnectStatus.swift; sourceTree = "<group>"; };
 		14FA6C512FA1AC0C16488592361D6D5C /* Pods-VPN Plus-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VPN Plus-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1A1EBDB0433200864C2C1FD38DCCC3F2 /* Account.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Account.swift; path = MPVPN/Classes/Account.swift; sourceTree = "<group>"; };
-		1A4D6BAB06CA847A8899E1EF7319524C /* Pods_VPN_Plus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_VPN_Plus.framework; path = "Pods-VPN Plus.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A4D6BAB06CA847A8899E1EF7319524C /* Pods_VPN_Plus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPN_Plus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20D2B2879ECC9A01B1AD0E072A6A4A71 /* MPVPN.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MPVPN.modulemap; sourceTree = "<group>"; };
 		2C63463105C90EE89D4FA92601CEAC16 /* Pods-VPN Plus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VPN Plus.modulemap"; sourceTree = "<group>"; };
 		2C80478022A379C86D4BA0C7B71B7317 /* VPNDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VPNDelegate.swift; path = MPVPN/Classes/VPNDelegate.swift; sourceTree = "<group>"; };
 		2DCDE0239E27450741E7330916B22B73 /* MPVPN-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MPVPN-Info.plist"; sourceTree = "<group>"; };
 		36C21A6F2BC04F2313C92CCF97260EE7 /* Pods-VPN Plus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VPN Plus.release.xcconfig"; sourceTree = "<group>"; };
 		38EC2A30B26C9595CC0BADF45F14A11B /* Pods-VPN Plus-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VPN Plus-Info.plist"; sourceTree = "<group>"; };
-		4CF48BD60ABF52975E082809E44FD2C6 /* MPVPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MPVPN.framework; path = MPVPN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CF48BD60ABF52975E082809E44FD2C6 /* MPVPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MPVPN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F9ED572D35B7FABCEACFBE877523D0C /* Pods-VPN Plus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VPN Plus.debug.xcconfig"; sourceTree = "<group>"; };
 		6FF1E8DF5C6D41D83255692B73765DF6 /* KeychainWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = MPVPN/Classes/KeychainWrapper.swift; sourceTree = "<group>"; };
 		8BC0F78FE767D8DF6730DE780344510F /* Pods-VPN Plus-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VPN Plus-frameworks.sh"; sourceTree = "<group>"; };
 		8C6818A2DF3B1FAE3E078D4B47E16052 /* Vpn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Vpn.swift; path = MPVPN/Classes/Vpn.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A8206D2A09F2B23B1027DAFE998450A6 /* VpnStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VpnStatus.swift; path = MPVPN/Classes/VpnStatus.swift; sourceTree = "<group>"; };
 		B51FE3AA0E90D3FD2A39B208018E0909 /* MPVPN.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MPVPN.xcconfig; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -165,7 +165,6 @@
 				A8206D2A09F2B23B1027DAFE998450A6 /* VpnStatus.swift */,
 				0E29A8389F82A2F9DA9861F83F153D65 /* Support Files */,
 			);
-			name = MPVPN;
 			path = MPVPN;
 			sourceTree = "<group>";
 		};
@@ -243,14 +242,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 28DAD7465F05F261C9F0972AF8AAF294 /* Products */;
@@ -319,6 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -417,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
