@@ -13,30 +13,34 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var status: UILabel!
     
+    lazy var vpn: VPN = {
+        let _vpn = VPN(delegate: self)
+        return _vpn
+    }()
+    
+    lazy var account = Account(serverAddress: serverAddress, sharedSecret: sharedSecret)
+    
     let serverAddress = "159.65.129.252"
     let sharedSecret = "4ec04e07-f030-4445-ba59-3d8c1cb180a2"
-    var account: Account!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        account = Account(serverAddress: serverAddress, sharedSecret: sharedSecret)
-        VPN.share.delegate = self
     }
 
     @IBAction func requestTapped(_ sender: Any) {
-        VPN.share.requestPermision(account: account)
+        vpn.requestPermision(account: account)
     }
     
     @IBAction func connectTapped(_ sender: Any) {
-        VPN.share.connect()
+        vpn.connect()
     }
     
     @IBAction func disconnectTapped(_ sender: Any) {
-        VPN.share.disconnect()
+        vpn.disconnect()
     }
     
     @IBAction func removeTapped(_ sender: Any) {
-        VPN.share.removeFromPreferences()
+        vpn.removeFromPreferences()
     }
     
 }
