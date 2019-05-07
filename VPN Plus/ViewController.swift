@@ -18,21 +18,26 @@ class ViewController: UIViewController {
         return _vpn
     }()
     
-    lazy var account = Account(serverAddress: serverAddress, sharedSecret: sharedSecret)
-    
-    let serverAddress = "159.65.129.252"
-    let sharedSecret = "4ec04e07-f030-4445-ba59-3d8c1cb180a2"
+    var account = [Account]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        account.append(Account(serverAddress: "178.128.91.181", sharedSecret: "04a4b50e-d456-4e61-bfea-ce861bb54947"))
+        account.append(Account(serverAddress: "178.128.62.207", sharedSecret: "7ecfe2f8-f5d4-4266-8a89-8de0e8277ec6"))
     }
 
     @IBAction func requestTapped(_ sender: Any) {
-        vpn.requestPermision(account: account)
+        if vpn.status() == .connected {
+            vpn.disconnect()
+        }
+        vpn.requestPermision(account: account[0])
     }
     
     @IBAction func connectTapped(_ sender: Any) {
-        vpn.connect()
+        if vpn.status() == .connected {
+            vpn.disconnect()
+        }
+        vpn.requestPermision(account: account[1])
     }
     
     @IBAction func disconnectTapped(_ sender: Any) {
@@ -47,22 +52,22 @@ class ViewController: UIViewController {
 
 extension ViewController: VPNDelegate {
     func vpn(_ vpn: VPN, statusDidChange status: VpnStatus) {
-        print("statusDidChange", status)
         self.status.text = status.description
     }
     
     func vpn(_ vpn: VPN, didRequestPermission status: ConnectStatus) {
-        print("didRequestPermission", status)
+        if status == .success {
+            vpn.connect()
+        }
     }
     
     func vpn(_ vpn: VPN, didConnectWithError error: String?) {
-        print("didConnectWithError", error ?? "")
+        
     }
     
     func vpnDidDisconnect(_ vpn: VPN) {
-        print("vpnDidDisconnect")
+        
     }
-    
     
 }
 
