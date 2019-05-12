@@ -14,6 +14,13 @@
 		BB89A0B4227F522D00877DFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB89A0B3227F522D00877DFE /* Assets.xcassets */; };
 		BB89A0B7227F522D00877DFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB89A0B5227F522D00877DFE /* LaunchScreen.storyboard */; };
 		BB89A0CB227F530200877DFE /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB89A0CA227F530200877DFE /* NetworkExtension.framework */; };
+		BBB69E712285D2900031A993 /* CustomerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB69E702285D2900031A993 /* CustomerManager.swift */; };
+		BBB69E762285D4520031A993 /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB69E742285D4520031A993 /* OnBoardingVC.swift */; };
+		BBB69E772285D4520031A993 /* OnBoardingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBB69E752285D4520031A993 /* OnBoardingVC.xib */; };
+		BBB69E7A2285D4A20031A993 /* OnBoardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB69E782285D4A20031A993 /* OnBoardingCell.swift */; };
+		BBB69E7B2285D4A20031A993 /* OnBoardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBB69E792285D4A20031A993 /* OnBoardingCell.xib */; };
+		BBB69E7E2285D5130031A993 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB69E7D2285D5130031A993 /* Button.swift */; };
+		BBB69E852285D9E30031A993 /* Extension+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB69E842285D9E30031A993 /* Extension+UITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,13 @@
 		BB89A0B8227F522D00877DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB89A0CA227F530200877DFE /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		BB89A0CC227F530200877DFE /* VPN Plus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "VPN Plus.entitlements"; sourceTree = "<group>"; };
+		BBB69E702285D2900031A993 /* CustomerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerManager.swift; sourceTree = "<group>"; };
+		BBB69E742285D4520031A993 /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
+		BBB69E752285D4520031A993 /* OnBoardingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingVC.xib; sourceTree = "<group>"; };
+		BBB69E782285D4A20031A993 /* OnBoardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCell.swift; sourceTree = "<group>"; };
+		BBB69E792285D4A20031A993 /* OnBoardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingCell.xib; sourceTree = "<group>"; };
+		BBB69E7D2285D5130031A993 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		BBB69E842285D9E30031A993 /* Extension+UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITableViewCell.swift"; sourceTree = "<group>"; };
 		BFEC1D26D98DB40B4302759C /* Pods_VPN_Plus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VPN_Plus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3263FD652BEE773F3D8046A /* Pods-VPN Plus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPN Plus.debug.xcconfig"; path = "Target Support Files/Pods-VPN Plus/Pods-VPN Plus.debug.xcconfig"; sourceTree = "<group>"; };
 		FD59CB675622AC770886B2E1 /* Pods-VPN Plus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPN Plus.release.xcconfig"; path = "Target Support Files/Pods-VPN Plus/Pods-VPN Plus.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,7 +88,11 @@
 		BB89A0AB227F522C00877DFE /* VPN Plus */ = {
 			isa = PBXGroup;
 			children = (
+				BBB69E832285D9C50031A993 /* Extensions */,
+				BBB69E7C2285D5030031A993 /* BaseView */,
 				BB89A0CC227F530200877DFE /* VPN Plus.entitlements */,
+				BBB69E722285D3DF0031A993 /* Manager */,
+				BBB69E732285D3F30031A993 /* ViewController */,
 				BB89A0AC227F522C00877DFE /* AppDelegate.swift */,
 				BB89A0AE227F522C00877DFE /* ViewController.swift */,
 				BB89A0B0227F522C00877DFE /* Main.storyboard */,
@@ -92,6 +110,41 @@
 				BFEC1D26D98DB40B4302759C /* Pods_VPN_Plus.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBB69E722285D3DF0031A993 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				BBB69E702285D2900031A993 /* CustomerManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		BBB69E732285D3F30031A993 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BBB69E742285D4520031A993 /* OnBoardingVC.swift */,
+				BBB69E752285D4520031A993 /* OnBoardingVC.xib */,
+				BBB69E782285D4A20031A993 /* OnBoardingCell.swift */,
+				BBB69E792285D4A20031A993 /* OnBoardingCell.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BBB69E7C2285D5030031A993 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				BBB69E7D2285D5130031A993 /* Button.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		BBB69E832285D9C50031A993 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BBB69E842285D9E30031A993 /* Extension+UITableViewCell.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +212,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB69E7B2285D4A20031A993 /* OnBoardingCell.xib in Resources */,
 				BB89A0B7227F522D00877DFE /* LaunchScreen.storyboard in Resources */,
+				BBB69E772285D4520031A993 /* OnBoardingVC.xib in Resources */,
 				BB89A0B4227F522D00877DFE /* Assets.xcassets in Resources */,
 				BB89A0B2227F522C00877DFE /* Main.storyboard in Resources */,
 			);
@@ -219,8 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB69E7A2285D4A20031A993 /* OnBoardingCell.swift in Sources */,
+				BBB69E7E2285D5130031A993 /* Button.swift in Sources */,
 				BB89A0AF227F522C00877DFE /* ViewController.swift in Sources */,
+				BBB69E852285D9E30031A993 /* Extension+UITableViewCell.swift in Sources */,
+				BBB69E762285D4520031A993 /* OnBoardingVC.swift in Sources */,
 				BB89A0AD227F522C00877DFE /* AppDelegate.swift in Sources */,
+				BBB69E712285D2900031A993 /* CustomerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

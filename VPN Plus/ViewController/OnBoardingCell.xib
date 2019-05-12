@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="OnBoardingCell" customModule="VPN_Plus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="467" height="632"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="467" height="632"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OK9-Xw-XeM" customClass="Button" customModule="VPN_Plus" customModuleProvider="target">
+                        <rect key="frame" x="143.5" y="572" width="180" height="40"/>
+                        <color key="backgroundColor" red="0.0" green="0.58039215686274503" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="m1q-gw-5DE"/>
+                            <constraint firstAttribute="width" constant="180" id="pT1-Ta-nTG"/>
+                        </constraints>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6Q0-Br-hJ8">
+                        <rect key="frame" x="214" y="522" width="39" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="nmS-q4-oGh"/>
+                        </constraints>
+                        <color key="pageIndicatorTintColor" red="0.56862745098039214" green="0.60784313725490191" blue="0.62745098039215685" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                        <color key="currentPageIndicatorTintColor" red="0.56862745098039214" green="0.60784313725490191" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                    </pageControl>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WY9-XI-X4P">
+                        <rect key="frame" x="20" y="451" width="427" height="61"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Secured, forever." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZk-9Q-m2J">
+                        <rect key="frame" x="20" y="413" width="427" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="img_onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="V9k-ZB-Lf9">
+                        <rect key="frame" x="40" y="20" width="387" height="373"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="6Q0-Br-hJ8" firstAttribute="top" secondItem="WY9-XI-X4P" secondAttribute="bottom" constant="10" id="8el-B4-7gD"/>
+                <constraint firstAttribute="bottom" secondItem="OK9-Xw-XeM" secondAttribute="bottom" constant="20" id="Dgt-Ag-JOZ"/>
+                <constraint firstItem="V9k-ZB-Lf9" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="HW7-Ht-gdP"/>
+                <constraint firstItem="OK9-Xw-XeM" firstAttribute="top" secondItem="6Q0-Br-hJ8" secondAttribute="bottom" constant="10" id="JDm-Re-Jfq"/>
+                <constraint firstAttribute="trailing" secondItem="WY9-XI-X4P" secondAttribute="trailing" constant="20" id="M1A-IR-vmk"/>
+                <constraint firstItem="V9k-ZB-Lf9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="40" id="MWl-N9-ght"/>
+                <constraint firstItem="WY9-XI-X4P" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Nd2-v6-69h"/>
+                <constraint firstItem="OK9-Xw-XeM" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Qkt-dp-q9V"/>
+                <constraint firstItem="V9k-ZB-Lf9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="YSA-aX-oDG"/>
+                <constraint firstAttribute="trailing" secondItem="V9k-ZB-Lf9" secondAttribute="trailing" constant="40" id="at3-Pz-kGz"/>
+                <constraint firstItem="dZk-9Q-m2J" firstAttribute="top" secondItem="V9k-ZB-Lf9" secondAttribute="bottom" constant="20" id="cjW-9I-zDa"/>
+                <constraint firstItem="dZk-9Q-m2J" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="hYx-Wk-9xj"/>
+                <constraint firstAttribute="trailing" secondItem="dZk-9Q-m2J" secondAttribute="trailing" constant="20" id="onz-8q-Unv"/>
+                <constraint firstItem="6Q0-Br-hJ8" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="sH8-rE-xTf"/>
+                <constraint firstItem="WY9-XI-X4P" firstAttribute="top" secondItem="dZk-9Q-m2J" secondAttribute="bottom" constant="10" id="vSw-40-Gsm"/>
+                <constraint firstItem="dZk-9Q-m2J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="vdQ-yR-orb"/>
+            </constraints>
+            <size key="customSize" width="467" height="632"/>
+            <point key="canvasLocation" x="-164.49275362318841" y="314.73214285714283"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="img_onboarding" width="240" height="378"/>
+    </resources>
+</document>
